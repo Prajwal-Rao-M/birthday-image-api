@@ -47,7 +47,7 @@ def generate_image():
         font = ImageFont.truetype(font_path, 60)
         
         # Add the name to the image at specified coordinates
-        draw.text((220, 295), name, fill=(160, 32, 240), font=font)
+        draw.text((300, 355), name, fill=(160, 32, 240), font=font)
         
         # Output to memory
         img_io = io.BytesIO()
