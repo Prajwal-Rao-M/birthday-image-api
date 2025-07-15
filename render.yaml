@@ -5,3 +5,19 @@ services:
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python app.py"
     plan: free
+    # Environment variables (optional)
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    # Health check configuration
+    healthCheckPath: /health
+    # Auto-deploy settings
+    autoDeploy: true
+    # Root directory (if your code is in a subdirectory)
+    # rootDir: ./api
+    # Custom domains (optional, for paid plans)
+    # domains:
+    #   - yourdomain.com
+    #   - www.yourdomain.com
